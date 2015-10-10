@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C012C405-894E-4AF8-9586-2B713A13E472}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeroBot.NET</RootNamespace>
+    <AssemblyName>HeroBot.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="InputManager">
+      <HintPath>lib\InputManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\HeroEntity.cs" />
+    <Compile Include="src\Heroes.cs" />
+    <Compile Include="src\Utility.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\abaddon\abaddon.png" />
+    <Content Include="img\abaddon\abaddongold.png" />
+    <Content Include="img\abaddon\hire.png" />
+    <Content Include="img\abaddon\lvlup.png" />
+    <Content Include="img\alabaster\alabaster.png" />
+    <Content Include="img\alabaster\alabastergold.png" />
+    <Content Include="img\alabaster\hire.png" />
+    <Content Include="img\alabaster\lvlup.png" />
+    <Content Include="img\alexa\alexa.png" />
+    <Content Include="img\alexa\alexagold.png" />
+    <Content Include="img\alexa\hire.png" />
+    <Content Include="img\alexa\lvlup.png" />
+    <Content Include="img\amenhotep\amenhotep.png" />
+    <Content Include="img\amenhotep\amenhotepgold.png" />
+    <Content Include="img\amenhotep\hire.png" />
+    <Content Include="img\amenhotep\lvlup.png" />
+    <Content Include="img\aphrodite\aphrodite.png" />
+    <Content Include="img\aphrodite\aphroditegold.png" />
+    <Content Include="img\aphrodite\hire.png" />
+    <Content Include="img\aphrodite\lvlup.png" />
+    <Content Include="img\astraea\astraea.png" />
+    <Content Include="img\astraea\astraeagold.png" />
+    <Content Include="img\astraea\hire.png" />
+    <Content Include="img\astraea\lvlup.png" />
+    <Content Include="img\athena\athena.png" />
+    <Content Include="img\athena\athenagold.png" />
+    <Content Include="img\athena\hire.png" />
+    <Content Include="img\athena\lvlup.png" />
+    <Content Include="img\atlas\atlas.png" />
+    <Content Include="img\atlas\atlasgold.png" />
+    <Content Include="img\atlas\hire.png" />
+    <Content Include="img\atlas\lvlup.png" />
+    <Content Include="img\beastlord\beastlord.png" />
+    <Content Include="img\beastlord\beastlordgold.png" />
+    <Content Include="img\beastlord\hire.png" />
+    <Content Include="img\beastlord\lvlup.png" />
+    <Content Include="img\betty\betty.png" />
+    <Content Include="img\betty\bettygold.png" />
+    <Content Include="img\betty\hire.png" />
+    <Content Include="img\betty\lvlup.png" />
+    <Content Include="img\bobby\bobby.png" />
+    <Content Include="img\bobby\bobbygold.png" />
+    <Content Include="img\bobby\hire.png" />
+    <Content Include="img\bobby\lvlup.png" />
+    <Content Include="img\brittany\brittany.png" />
+    <Content Include="img\brittany\brittanygold.png" />
+    <Content Include="img\brittany\hire.png" />
+    <Content Include="img\brittany\lvlup.png" />
+    <Content Include="img\broyle\broyle.png" />
+    <Content Include="img\broyle\broylegold.png" />
+    <Content Include="img\broyle\hire.png" />
+    <Content Include="img\broyle\lvlup.png" />
+    <Content Include="img\cadmia\cadmia.png" />
+    <Content Include="img\cadmia\cadmiagold.png" />
+    <Content Include="img\cadmia\hire.png" />
+    <Content Include="img\cadmia\lvlup.png" />
+    <Content Include="img\cid\cid.png" />
+    <Content Include="img\cid\cidgold.png" />
+    <Content Include="img\cid\hire.png" />
+    <Content Include="img\cid\lvlup.png" />
+    <Content Include="img\dreadknight\dreadknight.png" />
+    <Content Include="img\dreadknight\dreadknightgold.png" />
+    <Content Include="img\dreadknight\hire.png" />
+    <Content Include="img\dreadknight\lvlup.png" />
+    <Content Include="img\fisherman\fisherman.png" />
+    <Content Include="img\fisherman\fishermangold.png" />
+    <Content Include="img\fisherman\hire.png" />
+    <Content Include="img\fisherman\lvlup.png" />
+    <Content Include="img\forest\forest.png" />
+    <Content Include="img\forest\forestgold.png" />
+    <Content Include="img\forest\hire.png" />
+    <Content Include="img\forest\lvlup.png" />
+    <Content Include="img\frostleaf\frostleaf.png" />
+    <Content Include="img\frostleaf\frostleafgold.png" />
+    <Content Include="img\frostleaf\hire.png" />
+    <Content Include="img\frostleaf\lvlup.png" />
+    <Content Include="img\george\george.png" />
+    <Content Include="img\george\georgegold.png" />
+    <Content Include="img\george\hire.png" />
+    <Content Include="img\george\lvlup.png" />
+    <Content Include="img\grant\grant.png" />
+    <Content Include="img\grant\grantgold.png" />
+    <Content Include="img\grant\hire.png" />
+    <Content Include="img\grant\lvlup.png" />
+    <Content Include="img\ivan\hire.png" />
+    <Content Include="img\ivan\ivan.png" />
+    <Content Include="img\ivan\ivangold.png" />
+    <Content Include="img\ivan\lvlup.png" />
+    <Content Include="img\leon\hire.png" />
+    <Content Include="img\leon\leon.png" />
+    <Content Include="img\leon\leongold.png" />
+    <Content Include="img\leon\lvlup.png" />
+    <Content Include="img\lilin\hire.png" />
+    <Content Include="img\lilin\lilin.png" />
+    <Content Include="img\lilin\lilingold.png" />
+    <Content Include="img\lilin\lvlup.png" />
+    <Content Include="img\mazhu\hire.png" />
+    <Content Include="img\mazhu\lvlup.png" />
+    <Content Include="img\mazhu\mazhu.png" />
+    <Content Include="img\mazhu\mazhugold.png" />
+    <Content Include="img\mercedes\hire.png" />
+    <Content Include="img\mercedes\lvlup.png" />
+    <Content Include="img\mercedes\mercedes.png" />
+    <Content Include="img\mercedes\mercedesgold.png" />
+    <Content Include="img\mercedes\mercedesgold2.png" />
+    <Content Include="img\midas\hire.png" />
+    <Content Include="img\midas\lvlup.png" />
+    <Content Include="img\midas\midas.png" />
+    <Content Include="img\midas\midasgold.png" />
+    <Content Include="img\natalia\hire.png" />
+    <Content Include="img\natalia\lvlup.png" />
+    <Content Include="img\natalia\natalia.png" />
+    <Content Include="img\natalia\nataliagold.png" />
+    <Content Include="img\orntchya\hire.png" />
+    <Content Include="img\orntchya\lvlup.png" />
+    <Content Include="img\orntchya\orntchya.png" />
+    <Content Include="img\orntchya\orntchyagold.png" />
+    <Content Include="img\phthalo\hire.png" />
+    <Content Include="img\phthalo\lvlup.png" />
+    <Content Include="img\phthalo\phthalo.png" />
+    <Content Include="img\phthalo\phthalogold.png" />
+    <Content Include="img\prog.png" />
+    <Content Include="img\referijerator\hire.png" />
+    <Content Include="img\referijerator\lvlup.png" />
+    <Content Include="img\referijerator\referijerator.png" />
+    <Content Include="img\referijerator\referijeratorgold.png" />
+    <Content Include="img\samurai\hire.png" />
+    <Content Include="img\samurai\lvlup.png" />
+    <Content Include="img\samurai\samurai.png" />
+    <Content Include="img\samurai\samuraigold.png" />
+    <Content Include="img\shinatobe\hire.png" />
+    <Content Include="img\shinatobe\lvlup.png" />
+    <Content Include="img\shinatobe\shinatobe.png" />
+    <Content Include="img\shinatobe\shinatobegold.png" />
+    <Content Include="img\start.png" />
+    <Content Include="img\terra\hire.png" />
+    <Content Include="img\terra\lvlup.png" />
+    <Content Include="img\terra\terra.png" />
+    <Content Include="img\terra\terragold.png" />
+    <Content Include="img\treebeast\hire.png" />
+    <Content Include="img\treebeast\lvlup.png" />
+    <Content Include="img\treebeast\treebeast.png" />
+    <Content Include="img\treebeast\treebeastgold.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
